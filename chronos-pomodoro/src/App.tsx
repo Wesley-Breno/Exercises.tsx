@@ -1,15 +1,15 @@
+import { Heading } from './components/Heading';
+
 import './styles/global.css';
 import './styles/theme.css';
 
-function App() {
+export function App() {
     console.log('oi')
 
     return (
         <>
-            <h1>Hey bitch from App</h1>
-            <p>Test</p>
+            <Heading />
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, similique mollitia! Expedita officiis quasi debitis iure dolor recusandae magnam adipisci quaerat et nesciunt nihil ad eius repellendus corporis, dolorem qui?</p>
         </>
     )
 }
-
-export default App;
