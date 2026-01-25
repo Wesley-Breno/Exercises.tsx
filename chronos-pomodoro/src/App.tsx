@@ -1,4 +1,5 @@
 import { PlayCircleIcon } from 'lucide-react';
+import { useState } from 'react';
 
 import { Container } from './components/Container';
 import { CountDown } from './components/CountDown';
@@ -15,17 +16,13 @@ import './styles/theme.css';
 
 export function App() {
  
-    let numero = 0;
-
+    const [numero, setNumero] = useState(() => {
+        console.log('Lazy initialization')
+        return 0
+    })
+    
     function handleClick() {
-        const span = document.getElementById('numero')
-
-        if (!span) return;
-
-        numero += 1;
-        span.innerText = numero.toString()
-
-        console.log(numero, Date.now());
+        setNumero(prevState => prevState+1)
     }
 
     return (
